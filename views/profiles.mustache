@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<title></title>
+</head>
+<body class="container">
+	<span>{{timestamp}}</span>
+	<h1>Profiles</h1>	
+	<ol>
+		{{#profiles}}
+		<li>
+			<a href="/profile/{{username}}">{{name}}	</a>
+		</li>
+		{{/profiles}}
+	</ol>
+
+	<form action="/addprofile" method="POST">
+		<input type="text" name="name" placeholder="Name"><br>
+		<input type="text" name="username" placeholder="UserName"><br>
+		<input type="text" name="languages" placeholder="Languages"><br>
+		<input type="submit" value="Add Profile">
+	</form>
+</body>
+</html>
